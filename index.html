@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact with us</title>
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
   <main class="container">
@@ -16,23 +15,27 @@
     <section class="data-entry-section">
       <h2 class="form-title">Send us a Message</h2>
       <form class="data-entry-form" action="https://echo.htmlacademy.ru" method="POST">
-        <input class="data-entry-fields" type="text" name="uname" placeholder="Name">
-        <input class="data-entry-fields" type="email" name="uemail" placeholder="Email">
-        <input class="data-entry-fields" type="tel" name="uphone" placeholder="Mobile">
+        <label class="visually-hidden" for="#uname">Enter your name</label>
+        <input class="data-entry-fields" type="text" name="uname" placeholder="Name" id="uname" aria-hidden="true" spellcheck="false">
+        <label for="uemail" class="visually-hidden">Enter your email</label>
+        <input class="data-entry-fields" type="email" name="uemail" placeholder="Email" id="uemail" aria-hidden="true" spellcheck="false">
+        <label class="visually-hidden" for="uphonen">Enter your phone number</label>
+        <input class="data-entry-fields" type="tel" name="uphone" placeholder="Mobile" id="uphone" aria-hidden="true" spellcheck="false">
         <p class="communication-mode-section-info">Preferred mode of Communication</p>
         <div class="commun-mode-container">
           <label class="commun-mode-label">
             <input class="visually-hidden commun-mode-input" type="radio" name="pref_mode_of_com">
-            <span class="commun-mode-span"></span>
+            <span class="commun-mode-span" aria-hidden="true"></span>
             Email
           </label>
           <label class="commun-mode-label">
             <input class="visually-hidden commun-mode-input" type="radio" name="pref_mode_of_com" checked>
-            <span class="commun-mode-span"></span>
+            <span class="commun-mode-span" aria-hidden="true"></span>
             Phone
           </label>
         </div>
-        <textarea class="data-entry-fields message-entry-field" name="message" placeholder="Message"></textarea>
+        <label class="visually-hidden" for="#message">Enter your message</label>
+        <textarea class="data-entry-fields message-entry-field" name="message" placeholder="Message" id="message" spellcheck="false"></textarea>
         <button class="submit-button" type="submit" name="submit">Submit</button>
       </form>
     </section>
